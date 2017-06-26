@@ -1,3 +1,57 @@
-<p>
-  site works!
-</p>
+<div style="position:fixed;top:0;left:0;z-index:999;width:100%;">
+    <md-toolbar class="my_primary_toolbar">
+        <md-icon>call</md-icon>
+        <span style="margin-left:5px;font-size:12px;">Call (+84).123.456.789 for help</span>
+        <span class="example-spacer"></span>
+
+        <button md-icon-button>
+            <md-icon>shopping_cart</md-icon>
+        </button>
+    </md-toolbar>
+</div> 
+
+<div style="height:calc(1 * 40px);margin-bottom:10px;"></div>
+
+<div class="my_logo">
+    <img src="http://cdn6.bigcommerce.com/s-kccgq7u3r/images/stencil/250x100/logo_1493106051__65885.png" alt="">
+</div>
+
+<md-toolbar class="my_second_toolbar">
+    <div>
+        <button md-button>HOME</button>
+        <button md-button [mdMenuTriggerFor]="menuCatalog">CATALOG</button>
+        <button md-button [mdMenuTriggerFor]="menuThemeFeatures">THEME FEATURES</button>
+        <button md-button>BLOG</button>
+        <button md-button>ABOUT US</button>
+        <button md-button>CONTACT US</button>
+        <button md-button>SHIPPING & RETURNS</button>
+
+        <md-menu #menuThemeFeatures="mdMenu">
+            <button md-menu-item>All Theme features</button>
+            <button md-menu-item>Bodysuits</button>
+            <button md-menu-item>Jumpers Cardigans</button>
+            <button md-menu-item>Maxi Dresses</button>
+            <button md-menu-item>Occasion Dresses</button>
+            <button md-menu-item>Onesies & Nightwear</button>
+            <button md-menu-item>Playsuits & Jumpsuits</button>
+            <button md-menu-item>Shirts & Blouses</button>
+        </md-menu>
+
+        <md-menu #menuCatalog="mdMenu">
+            <button md-menu-item>All Catalog</button>
+            <button md-menu-item>Accessories</button>
+            <button md-menu-item>Clothing</button>
+            <button md-menu-item>Gift Vouchers</button>
+            <button md-menu-item>Men</button>
+            <button md-menu-item>Shoes</button>
+            <button md-menu-item>Swimwear</button>
+            <button md-menu-item>Women</button>
+        </md-menu>
+    </div>
+</md-toolbar>
+
+
+
+<div class="w3-container">
+    <app-produtos></app-produtos>
+</div>
