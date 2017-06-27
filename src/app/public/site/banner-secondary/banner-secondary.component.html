@@ -1,0 +1,70 @@
+<div class="w3-row">
+  <div class="w3-col s6">
+    <div (mouseover)="mouseOver($event)" (mouseleave)="mouseLeave($event)" *ngIf="items[0]" class="w3-card-4" class="image_col_1" [ngStyle]="{'background-image': 'url('+ verifyImage(items[0]) +')'}">
+      <div class="w3-display-container dimmer" style="display:none;">
+        <div class="w3-display-middle w3-allerta">
+          <p class="w3-xxxlarge w3-text-light-gray">{{items[0].title}}</p>
+          <p style="text-align:center;" class="w3-xlarge w3-text-light-gray">{{items[0].sku}}</p>
+          <p class="w3-xxlarge w3-text-light-gray">
+            <span>
+              <span *ngIf="items[0].simple_product[0].sale_price">De</span>
+              <span *ngIf="!items[0].simple_product[0].sale_price">Por</span>
+              R$ {{items[0].simple_product[0].price}}
+            </span>
+          </p>
+          <p *ngIf="items[0].simple_product[0].sale_price" style="text-align:right;" class="w3-xxlarge w3-text-light-gray">
+            <b>Por R$ {{items[0].simple_product[0].sale_price}}</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!items[0]" class="uil-ring-css spinner_col_1">
+      <div></div>
+    </div>
+    <div (mouseover)="mouseOver($event)" (mouseleave)="mouseLeave($event)" *ngIf="items[1]" class="w3-card-4" class="image_col_1" [ngStyle]="{'background-image': 'url('+ verifyImage(items[1]) +')'}">
+      <div class="w3-display-container dimmer" style="display:none;">
+        <div class="w3-display-middle w3-allerta">
+          <p class="w3-xxxlarge w3-text-light-gray">{{items[1].title}}</p>
+          <p style="text-align:center;" class="w3-xlarge w3-text-light-gray">{{items[1].sku}}</p>
+          <p class="w3-xxlarge w3-text-light-gray">
+            <span>
+              <span *ngIf="items[1].simple_product[0].sale_price">De</span>
+              <span *ngIf="!items[1].simple_product[0].sale_price">Por</span>
+              R$ {{items[1].simple_product[0].price}}
+            </span>
+          </p>
+          <p *ngIf="items[1].simple_product[0].sale_price" style="text-align:right;" class="w3-xxlarge w3-text-light-gray">
+            <b>Por R$ {{items[1].simple_product[0].sale_price}}</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!items[1]" class="uil-ring-css spinner_col_1">
+      <div></div>
+    </div>
+  </div>
+  <div class="w3-col s6">
+    <div (mouseover)="mouseOver($event)" (mouseleave)="mouseLeave($event)" *ngIf="items[2]" class="w3-card-4" class="image_col_2" [ngStyle]="{'background-image': 'url('+ verifyImage(items[2]) +')'}">
+      <div class="w3-display-container dimmer" style="display:none;">
+        <div class="w3-display-middle w3-allerta">
+          <p class="w3-xxxlarge w3-text-light-gray">{{items[2].title}}</p>
+          <p style="text-align:center;" class="w3-xlarge w3-text-light-gray">{{items[2].sku}}</p>
+          <p class="w3-xxlarge w3-text-light-gray">
+            <span>
+              <span *ngIf="items[2].simple_product[0].sale_price">De</span>
+              <span *ngIf="!items[2].simple_product[0].sale_price">Por</span>
+              R$ {{items[2].simple_product[0].price}}
+            </span>
+          </p>
+          <p *ngIf="items[2].simple_product[0].sale_price" style="text-align:right;" class="w3-xxlarge w3-text-light-gray">
+            <b>Por R$ {{items[2].simple_product[0].sale_price}}</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!items[2]" class="uil-ring-css spinner_col_2">
+      <div></div>
+    </div>
+    <div class="w3-card-4" class="image_col_3" [ngStyle]="{'background-image': 'url(assets/images/banner_4.jpg)'}"></div>
+  </div>
+</div>

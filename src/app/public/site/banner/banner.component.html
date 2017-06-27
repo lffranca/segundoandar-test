@@ -1,0 +1,27 @@
+<div class="w3-content w3-display-container" #listBanner [ngStyle]="{'display': show?'block':'none'}">
+  <div *ngFor="let item of items.imagens" class="w3-animate-right image_carrousel" [ngStyle]="{'background-image': 'url(' + url + item.imagem + ')' }">
+    <div class="w3-display-middle w3-allerta">
+      <p class="w3-xxxlarge w3-text-light-gray">{{items.title}}</p>
+      <p style="text-align:center;" class="w3-xlarge w3-text-light-gray">{{items.sku}}</p>
+      <p class="w3-xxlarge w3-text-light-gray">
+        <span>
+          <span *ngIf="items.simple_product[0].sale_price">De</span>
+          <span *ngIf="!items.simple_product[0].sale_price">Por</span>
+          R$ {{items.simple_product[0].price}}
+        </span>
+      </p>
+      <p *ngIf="items.simple_product[0].sale_price" style="text-align:right;" class="w3-xxlarge w3-text-light-gray">
+        <b>Por R$ {{items.simple_product[0].sale_price}}</b>
+      </p>
+    </div>
+  </div>
+
+  <button class="w3-button w3-black w3-display-bottommiddle">View Product</button>
+
+  <button class="w3-button w3-black w3-display-left" (click)="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" (click)="plusDivs(1)">&#10095;</button>
+</div>
+
+<div *ngIf="!show" class="uil-ring-css spinner">
+  <div></div>
+</div>

@@ -17,41 +17,48 @@
 </div>
 
 <md-toolbar class="my_second_toolbar">
-    <div>
-        <button md-button>HOME</button>
-        <button md-button [mdMenuTriggerFor]="menuCatalog">CATALOG</button>
-        <button md-button [mdMenuTriggerFor]="menuThemeFeatures">THEME FEATURES</button>
-        <button md-button>BLOG</button>
-        <button md-button>ABOUT US</button>
-        <button md-button>CONTACT US</button>
-        <button md-button>SHIPPING & RETURNS</button>
+    <div class="w3-display-container" style="width:100%;">
+        <div class="w3-display-middle">
+            <button md-button>HOME</button>
+            <button md-button [mdMenuTriggerFor]="menuCatalog">
+                CATALOG
+                <md-icon>keyboard_arrow_down</md-icon>
+            </button>
+            <button md-button [mdMenuTriggerFor]="menuThemeFeatures">
+                THEME FEATURES
+                <md-icon>keyboard_arrow_down</md-icon>
+            </button>
+            <button md-button>BLOG</button>
+            <button md-button>ABOUT US</button>
+            <button md-button>CONTACT US</button>
+            <button md-button>SHIPPING & RETURNS</button>
 
-        <md-menu #menuThemeFeatures="mdMenu">
-            <button md-menu-item>All Theme features</button>
-            <button md-menu-item>Bodysuits</button>
-            <button md-menu-item>Jumpers Cardigans</button>
-            <button md-menu-item>Maxi Dresses</button>
-            <button md-menu-item>Occasion Dresses</button>
-            <button md-menu-item>Onesies & Nightwear</button>
-            <button md-menu-item>Playsuits & Jumpsuits</button>
-            <button md-menu-item>Shirts & Blouses</button>
-        </md-menu>
+            <md-menu #menuThemeFeatures="mdMenu">
+                <button md-menu-item>All Theme features</button>
+                <button md-menu-item>Bodysuits</button>
+                <button md-menu-item>Jumpers Cardigans</button>
+                <button md-menu-item>Maxi Dresses</button>
+                <button md-menu-item>Occasion Dresses</button>
+                <button md-menu-item>Onesies & Nightwear</button>
+                <button md-menu-item>Playsuits & Jumpsuits</button>
+                <button md-menu-item>Shirts & Blouses</button>
+            </md-menu>
 
-        <md-menu #menuCatalog="mdMenu">
-            <button md-menu-item>All Catalog</button>
-            <button md-menu-item>Accessories</button>
-            <button md-menu-item>Clothing</button>
-            <button md-menu-item>Gift Vouchers</button>
-            <button md-menu-item>Men</button>
-            <button md-menu-item>Shoes</button>
-            <button md-menu-item>Swimwear</button>
-            <button md-menu-item>Women</button>
-        </md-menu>
+            <md-menu #menuCatalog="mdMenu">
+                <button md-menu-item>All Catalog</button>
+                <button md-menu-item>Accessories</button>
+                <button md-menu-item>Clothing</button>
+                <button md-menu-item>Gift Vouchers</button>
+                <button md-menu-item>Men</button>
+                <button md-menu-item>Shoes</button>
+                <button md-menu-item>Swimwear</button>
+                <button md-menu-item>Women</button>
+            </md-menu>
+        </div>
     </div>
 </md-toolbar>
 
+<app-banner [items]="getImagesBanner()"></app-banner>
 
+<app-banner-secondary [items]="getImagesBannerSecondary()"></app-banner-secondary>
 
-<div class="w3-container">
-    <app-produtos></app-produtos>
-</div>

@@ -1,3 +1,15 @@
+=all-align-center()
+    align-items: center
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+
 .my_logo
     text-align: center
     padding: 20px 0 20px 0
+
+.all-menu
+    width: 100%
+    +all-align-center()
+    .content
